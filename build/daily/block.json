@@ -1,0 +1,73 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ramadan/daily",
+  "title": "Daily Ramadan Time",
+  "category": "ramadan",
+  "icon": "megaphone",
+  "description": "Display daily ramadan time.",
+  "keywords": [
+    "ramadan",
+    "daily",
+    "time"
+  ],
+  "version": "1.0.0",
+  "textdomain": "ramadan",
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "dateformat": {
+      "type": "string"
+    },
+    "timeformat": {
+      "type": "string"
+    },
+    "dayformat": {
+      "type": "string"
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "date": true,
+        "day": false,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": true,
+        "dhuhr": true,
+        "asr": true,
+        "maghrib": true,
+        "iftar": false,
+        "sunset": false,
+        "isha": true
+      }
+    }
+  },
+  "example": {
+    "attributes": {
+      "date": "2023-01-01",
+      "city": "Dhaka",
+      "dateformat": "d F, l",
+      "timeformat": "h:i A",
+      "dayformat": "D",
+      "columns": {
+        "date": true,
+        "day": false,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": true,
+        "dhuhr": true,
+        "asr": true,
+        "maghrib": true,
+        "iftar": false,
+        "sunset": true,
+        "isha": true
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

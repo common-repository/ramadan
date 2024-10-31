@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ramadan/ramadan",
+  "title": "Ramadan Time",
+  "category": "ramadan",
+  "icon": "megaphone",
+  "description": "Display yearly ramadan time.",
+  "keywords": [
+    "ramadan",
+    "monthly"
+  ],
+  "version": "1.0.0",
+  "textdomain": "ramadan",
+  "attributes": {
+    "date": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "dateformat": {
+      "type": "string"
+    },
+    "timeformat": {
+      "type": "string"
+    },
+    "dayformat": {
+      "type": "string"
+    },
+    "first_phase_title": {
+      "type": "string"
+    },
+    "second_phase_title": {
+      "type": "string"
+    },
+    "third_phase_title": {
+      "type": "string"
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "date": true,
+        "day": true,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": false,
+        "dhuhr": false,
+        "asr": false,
+        "iftar": true,
+        "maghrib": true,
+        "sunset": false,
+        "isha": false
+      }
+    }
+  },
+  "example": {
+    "attributes": {
+      "date": "2022-01-01",
+      "city": "Dhaka",
+      "dateformat": "d M",
+      "timeformat": "h:i A",
+      "dayformat": "D",
+      "first_phase_title ": "10 Days: Mercy of Allah",
+      "second_phase_title": "10 Days: Forgiveness of Allah",
+      "third_phase_title ": "10 Days: Safety from the Hellfire",
+      "columns": {
+        "date": true,
+        "day": true,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": false,
+        "dhuhr": false,
+        "asr": false,
+        "iftar": true,
+        "maghrib": true,
+        "sunset": false,
+        "isha": false
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

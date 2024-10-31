@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ramadan/yearly",
+  "title": "Yearly Ramadan Time",
+  "category": "ramadan",
+  "icon": "megaphone",
+  "description": "Display yearly ramadan time.",
+  "keywords": [
+    "ramadan",
+    "yearly"
+  ],
+  "attributes": {
+    "year": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "dateformat": {
+      "type": "string"
+    },
+    "timeformat": {
+      "type": "string"
+    },
+    "dayformat": {
+      "type": "string"
+    },
+    "columns": {
+      "type": "object",
+      "default": {
+        "date": true,
+        "day": false,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": true,
+        "dhuhr": true,
+        "asr": true,
+        "maghrib": true,
+        "iftar": false,
+        "sunset": false,
+        "isha": true
+      }
+    }
+  },
+  "example": {
+    "attributes": {
+      "year": "2023",
+      "city": "Dhaka",
+      "dateformat": "d F, l",
+      "timeformat": "h:i A",
+      "dayformat": "D",
+      "columns": {
+        "date": true,
+        "day": false,
+        "sahri": true,
+        "fajr": true,
+        "sunrise": true,
+        "dhuhr": true,
+        "asr": true,
+        "maghrib": true,
+        "iftar": false,
+        "sunset": false,
+        "isha": true
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}
